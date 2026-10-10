@@ -136,6 +136,16 @@ SIMPLE_JWT = {
 # }
 
 
+# Mengizinkan domain spesifik (Lebih Aman)
+CORS_ALLOWED_ORIGINS = [
+    "https://namaproject.vercel.app",  # Domain Vercel kamu nanti
+    "http://localhost:3000",           # Untuk testing Next.js di lokal
+    "http://127.0.0.1:3000",
+]
+
+# Izinkan pengiriman cookie/token jika menggunakan otentikasi session/credentials
+CORS_ALLOW_CREDENTIALS = True
+
 DATABASE_URL = os.environ.get(
     'DATABASE_URL',
     f"sqlite:///{BASE_DIR / 'db.sqlite3'}"
@@ -190,7 +200,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 #     "http://localhost:3000",
 #     "http://127.0.0.1:3000",
 # ]
-CORS_ALLOW_ALL_ORIGINS = True
+# CORS_ALLOW_ALL_ORIGINS = True
 ALLOWED_HOSTS = ['greennus.pythonanywhere.com', 'localhost', '127.0.0.1', '*']  # Mengizinkan React / React Native terhubung tanpa kendala CORS
 # Email
 # https://docs.djangoproject.com/en/6.1/topics/email/#topic-email-configuration
