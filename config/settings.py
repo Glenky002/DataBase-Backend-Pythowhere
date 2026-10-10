@@ -28,9 +28,12 @@ SECRET_KEY = 'django-insecure-6(jn7beoyc_&*1kr+1bru89llt^9(@d%oknbe#19c6*i3-6j66
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
-
+# CORS_ALLOW_ALL_ORIGINS = True
+ALLOWED_HOSTS = [
+    'greennus.pythonanywhere.com', 
+    'localhost', 
+    '127.0.0.1'
+]
 # Application definition
 
 INSTALLED_APPS = [
@@ -61,6 +64,7 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
+
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
@@ -230,12 +234,7 @@ CORS_ALLOW_METHODS = [
     "PUT",
 ]
 
-# CORS_ALLOW_ALL_ORIGINS = True
-ALLOWED_HOSTS = [
-    'greennus.pythonanywhere.com', 
-    'localhost', 
-    '127.0.0.1'
-]
+
 
 CORS_ALLOW_ALL_ORIGINS = False
  # Mengizinkan React / React Native terhubung tanpa kendala CORS
