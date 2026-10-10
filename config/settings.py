@@ -146,10 +146,10 @@ CORS_ALLOWED_ORIGINS = [
 # Izinkan pengiriman cookie/token jika menggunakan otentikasi session/credentials
 CORS_ALLOW_CREDENTIALS = True
 
-DATABASE_URL = os.environ.get(
-    'DATABASE_URL',
-    f"sqlite:///{BASE_DIR / 'db.sqlite3'}"
-)
+# DATABASE_URL = os.environ.get(
+#     'DATABASE_URL',
+#     f"sqlite:///{BASE_DIR / 'db.sqlite3'}"
+# )
 
 # DATABASES = {
 #     'default': dj_database_url.config(
@@ -160,10 +160,10 @@ DATABASE_URL = os.environ.get(
 # }
 # Konfigurasi Database Fleksibel
 DATABASES = {
-    'default': dj_database_url.config(
-        default=f"sqlite:///{BASE_DIR / 'db.sqlite3'}",
-        conn_max_age=600
-    )
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
 }
 
 
