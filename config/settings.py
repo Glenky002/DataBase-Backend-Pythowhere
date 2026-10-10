@@ -151,11 +151,18 @@ DATABASE_URL = os.environ.get(
     f"sqlite:///{BASE_DIR / 'db.sqlite3'}"
 )
 
+# DATABASES = {
+#     'default': dj_database_url.config(
+#         default=DATABASE_URL,
+#         conn_max_age=600,
+#         ssl_require=True if 'postgresql' in DATABASE_URL else False
+#     )
+# }
+# Konfigurasi Database Fleksibel
 DATABASES = {
     'default': dj_database_url.config(
-        default=DATABASE_URL,
-        conn_max_age=600,
-        ssl_require=True if 'postgresql' in DATABASE_URL else False
+        default=f"sqlite:///{BASE_DIR / 'db.sqlite3'}",
+        conn_max_age=600
     )
 }
 
