@@ -138,8 +138,8 @@ SIMPLE_JWT = {
 
 # Mengizinkan domain spesifik (Lebih Aman)
 CORS_ALLOWED_ORIGINS = [
-    "https://saas-school-next-js.vercel.app",  # Domain Vercel kamu nanti
-    "http://localhost:3000",           # Untuk testing Next.js di lokal
+    "https://saas-school-next-js.vercel.app",
+    "http://localhost:3000",
     "http://127.0.0.1:3000",
 ]
 
@@ -207,8 +207,40 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 #     "http://localhost:3000",
 #     "http://127.0.0.1:3000",
 # ]
+
+
+CORS_ALLOW_HEADERS = [
+    "accept",
+    "accept-encoding",
+    "authorization",
+    "content-type",
+    "dnt",
+    "origin",
+    "user-agent",
+    "x-csrftoken",
+    "x-requested-with",
+]
+
+CORS_ALLOW_METHODS = [
+    "DELETE",
+    "GET",
+    "OPTIONS",
+    "PATCH",
+    "POST",
+    "PUT",
+]
+
 # CORS_ALLOW_ALL_ORIGINS = True
-ALLOWED_HOSTS = ['greennus.pythonanywhere.com', 'localhost', '127.0.0.1', '*']  # Mengizinkan React / React Native terhubung tanpa kendala CORS
+ALLOWED_HOSTS = [
+    'greennus.pythonanywhere.com', 
+    'localhost', 
+    '127.0.0.1'
+]
+
+CORS_ALLOW_ALL_ORIGINS = False
+ # Mengizinkan React / React Native terhubung tanpa kendala CORS
+
+
 # Email
 # https://docs.djangoproject.com/en/6.1/topics/email/#topic-email-configuration
 
