@@ -138,7 +138,7 @@ SIMPLE_JWT = {
 
 # Mengizinkan domain spesifik (Lebih Aman)
 CORS_ALLOWED_ORIGINS = [
-    "https://namaproject.vercel.app",  # Domain Vercel kamu nanti
+    "https://saas-school-next-js.vercel.app",  # Domain Vercel kamu nanti
     "http://localhost:3000",           # Untuk testing Next.js di lokal
     "http://127.0.0.1:3000",
 ]
