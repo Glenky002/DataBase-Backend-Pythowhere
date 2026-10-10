@@ -190,7 +190,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 #     "http://localhost:3000",
 #     "http://127.0.0.1:3000",
 # ]
-CORS_ALLOW_ALL_ORIGINS = True  # Mengizinkan React / React Native terhubung tanpa kendala CORS
+CORS_ALLOW_ALL_ORIGINS = True
+ALLOWED_HOSTS = ['greennus.pythonanywhere.com', 'localhost', '127.0.0.1', '*']  # Mengizinkan React / React Native terhubung tanpa kendala CORS
 # Email
 # https://docs.djangoproject.com/en/6.1/topics/email/#topic-email-configuration
 
